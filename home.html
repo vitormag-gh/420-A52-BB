@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    
+    <link rel="stylesheet" type="text/css" href="C:\Users\riskf\OneDrive\Documents\Courses\AEC Spécialiste en intelligence artificielle\Courses\4 - 420-A52-BB - Algorithmes d’apprentissage supervisé\Projet_session\style.css">
+</head>
+<body>
+    <header>
+       <div class="container">
+        <div id="brandname">
+              Machine Learning App with Flask
+        </div>
+        <h2>Stress detection tool for txt</h2>
+       </div>
+       </header>
+       
+	   <!-- Main Input For Receiving Query to our ML -->
+       <div class="ml-container">
+           <form action="{{ url_for('predict')}}" method="POST">
+            <p>Enter Your Text/Message Here</p>
+            <!-- <input type="text" name="comment"/> -->
+            <textarea name="message" rows="6" cols="50"></textarea>
+            <br/>
+            <input type="submit" class="btn-info" value="predict">
+         </form>
+       
+        {{ prediction_text }}
+        
+       </div>
+</body>
+</html>
